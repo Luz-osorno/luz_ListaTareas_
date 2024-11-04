@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> LISTA DE TAREAS</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/Vue3.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Vue</h1>
+    </header>
+    
+    <section id="seccion">
+        <article>
+            <h2>Tareas</h2>
+            <p>.......................</p>
+            <input type="text" v-model="nuevaTarea" placeholder="Escribe una nueva tarea" />
+            <hr />
+            <div>
+                <button @click="agregarTarea" class="boton-agregar">+</button>
+                <button @click="eliminarTarea" class="boton-eliminar">-</button>
+            </div>
+            <p class="tareas-numero">{{ tareas.length }}</p>
+            <div class="barra" :style="barraEstilo">
+                <span class="porcentaje-texto">{{ porcentajeCompletado }}%</span>
+            </div>
+            <hr />
+            <ul>
+                <li v-for="(tarea, index) in tareas" :key="index">
+                    <span :class="{ 'tachada': tarea.realizada }" @click="tarea.realizada = !tarea.realizada">{{ tarea.nombre }}</span>
+                </li>
+            </ul>
+            <p>Tareas completadas: {{ tareasCompletadas }}</p>
+        </article>
+    </section>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(255, 255, 237);
+    text-align: center;
+}
+
+header {
+    background-color: pink;
+    padding: 20px;
+}
+
+.barra {
+    height: 30px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: gray;
+    position: relative;
+}
+
+.porcentaje-texto {
+    position: absolute;
+    color: black;
+    line-height: 35px;
+    width: 100%;
+    text-align: left;
+}
+
+.tachada {
+    text-decoration: line-through;
+    color: gray;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.boton-agregar {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.boton-eliminar {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.boton-agregar, .boton-eliminar {
+    margin: 5px;
+}
+
+.tareas-numero {
+    font-size: 20px;
+}
